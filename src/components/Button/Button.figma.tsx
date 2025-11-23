@@ -3,32 +3,23 @@ import { figma } from '@figma/code-connect'
 import { Button } from './Button'
 
 /**
- * -- Este es un ejemplo de cómo vincular tu componente Button con Figma --
+ * Conexión entre el componente Button de Figma y React
  * 
- * PASOS PARA USAR:
- * 1. Abre tu componente Button en Figma
- * 2. Copia la URL del componente (debe verse como: https://www.figma.com/file/FILE_ID/FILE_NAME?node-id=NODE_ID)
- * 3. Reemplaza 'YOUR_FIGMA_NODE_URL' abajo con esa URL
- * 4. Ejecuta: npx @figma/code-connect publish --token=TU_TOKEN
+ * Este ejemplo muestra cómo usar el componente Button en tu código.
+ * Las propiedades se ajustarán automáticamente cuando tu componente
+ * de Figma tenga variantes y propiedades configuradas.
  */
 
 figma.connect(
   Button,
-  'YOUR_FIGMA_NODE_URL', // 👈 Reemplaza esto con la URL de tu componente en Figma
+  'https://www.figma.com/design/0XYUpz6zUHOv622PhKXb8v/Untitled?node-id=1-4',
   {
-    props: {
-      primary: figma.boolean('Variant', {
-        true: 'Primary',
-        false: 'Secondary',
-      }),
-      size: figma.enum('Size', {
-        Small: 'small',
-        Medium: 'medium',
-        Large: 'large',
-      }),
-      label: figma.string('Text'),
-    },
-    example: (props) => <Button {...props} />,
+    example: () => (
+      <Button 
+        label="Button" 
+        primary={true}
+      />
+    ),
   }
 )
 
