@@ -8,6 +8,12 @@ const preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      source: {
+        type: 'dynamic',
+        language: 'jsx',
+      },
+    },
   },
 };
 

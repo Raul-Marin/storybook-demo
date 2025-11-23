@@ -12,6 +12,7 @@ const config = {
   },
   docs: {
     autodocs: 'tag',
+    defaultName: 'Documentación',
   },
 };
 export default config;
