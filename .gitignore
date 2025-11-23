@@ -27,3 +27,7 @@ dist-ssr
 # Storybook
 storybook-static
 
+# Environment variables (tokens sensibles)
+.env
+.env.local
+
